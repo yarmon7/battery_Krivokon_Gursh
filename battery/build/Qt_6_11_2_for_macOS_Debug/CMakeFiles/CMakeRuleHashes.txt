@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+a59b1404becf48c343c4d6fc610d0619 CMakeFiles/battery_autogen
+fa0e7a1234d5b823c93ce78d7da9cba3 battery_autogen/timestamp

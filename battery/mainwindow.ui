@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ресурс батареи</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="batteryGroupBox">
+      <property name="title">
+       <string>Параметры батареи</string>
+      </property>
+      <layout class="QFormLayout" name="batteryFormLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="cellCountLabel">
+         <property name="text">
+          <string>Количество ячеек:</string>
+         </property>
+         <property name="buddy">
+          <cstring>cellCountSpinBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="cellCountSpinBox">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>16</number>
+         </property>
+         <property name="value">
+          <number>4</number>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="voltageLabel">
+         <property name="text">
+          <string>Напряжение:</string>
+         </property>
+         <property name="buddy">
+          <cstring>voltageSpinBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="voltageSpinBox">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="suffix">
+          <string> В</string>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>16.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="capacityLabel">
+         <property name="text">
+          <string>Номинальная ёмкость:</string>
+         </property>
+         <property name="buddy">
+          <cstring>capacitySpinBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="capacitySpinBox">
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="suffix">
+          <string> мА·ч</string>
+         </property>
+         <property name="maximum">
+          <double>1000000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>5000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="chargePercentageTitleLabel">
+         <property name="text">
+          <string>Заряд по напряжению:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="chargePercentageLabel">
+         <property name="text">
+          <string>— %</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="chargeStatusTitleLabel">
+         <property name="text">
+          <string>Состояние заряда:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="chargeStatusLabel">
+         <property name="text">
+          <string>—</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="consumptionGroupBox">
+      <property name="title">
+       <string>Расход ёмкости</string>
+      </property>
+      <layout class="QFormLayout" name="consumptionFormLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="consumptionLabel">
+         <property name="text">
+          <string>Израсходовать:</string>
+         </property>
+         <property name="buddy">
+          <cstring>consumptionSpinBox</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="consumptionSpinBox">
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="suffix">
+          <string> мА·ч</string>
+         </property>
+         <property name="maximum">
+          <double>1000000.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="consumeButton">
+         <property name="text">
+          <string>Израсходовать</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="remainingCapacityTitleLabel">
+         <property name="text">
+          <string>Осталось:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="remainingCapacityLabel">
+         <property name="text">
+          <string>— мА·ч</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="remainingPercentageTitleLabel">
+         <property name="text">
+          <string>Осталось в процентах:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="remainingPercentageLabel">
+         <property name="text">
+          <string>— %</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="batteryIconTitleLabel">
+         <property name="text">
+          <string>Индикатор:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="batteryIconLabel">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="toolTip">
+          <string>Индикатор оставшейся ёмкости</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>560</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
